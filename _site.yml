@@ -1,12 +1,88 @@
 name: "."
 title: "EVSB7150"
 description: |
-  EVSB7150
+  Course Materials for EVSB7150: Population and Communnity Ecology
 output_dir: "docs"
 navbar:
-  right:
-    - text: "Home"
+  left:
+    - icon: fa-home
       href: index.html
-    - text: "About"
-      href: about.html
+  right:
+    - text: "Syllabus"
+      icon: fas fa-book
+      href: Syllabus.html
+    - text: "Schedule"
+      icon: fas fa-calendar
+      href: schedule.html
+    - text: "Lectures"
+      icon: fa-file-pdf-o
+      # menu:
+      #   - text: "Lecture 0: Introduction to WILD6900"
+      #     href: articles/Lecture0/Lecture0.html
+      #   - text: "Lecture 1: Introduction to statistical inference in ecology"
+      #     href: articles/Lecture1/Lecture1.html
+      #   - text: "Lecture 2: Probability refresher (or introduction)"
+      #     href: articles/Lecture2/Lecture2.html
+      #   - text: "Lecture 3: Principles of Bayesian inference"
+      #     href: articles/Lecture3/Lecture3.html
+      #   - text: "Lecture 4: More about prior distributions"
+      #     href: articles/Lecture4/Lecture4.html
+      #   - text: "Lecture 5: Implementing Bayesian models: Introduction to MCMC samplers"
+      #     href: articles/Lecture5/Lecture5.html
+      #   - text: "Lecture 6: Introduction of Bayesian analysis using JAGS"
+      #     href: articles/Lecture6/Lecture6.html
+      #   - text: "Lecture 7: Generalized linear model review"
+      #     href: articles/Lecture7/Lecture7.html
+      #   - text: "Lecture 8: Introduction to hierarchical models"
+      #     href: articles/Lecture8/Lecture8.html
+      #   - text: "Lecture 9: Introduction to state-space models"
+      #     href: articles/Lecture9/Lecture9.html
+      #   - text: "Lecture 10: Estimating abundance: N-mixture models"
+      #     href: articles/Lecture10/Lecture10.html
+      #   - text: "Lecture 11: Estimating abundance: Occupancy modeling"
+      #     href: articles/Lecture11/Lecture11.html
+      #   - text: "Lecture 12: Estimating abundance: Closed-population capture-mark-recapture"
+      #     href: articles/Lecture12/Lecture12.html
+      #   - text: "Lecture 13: Estimating survival: Open-population capture-mark-recapture"
+      #     href: articles/Lecture13/Lecture13.html
+      #   - text: "Lecture 14: Estimating abundance and survival: Open-population capture-mark-recapture"
+      #     href: articles/Lecture14/Lecture14.html
+      #   - text: "Lecture 15: Multi-state models"
+      #     href: articles/Lecture15/Lecture15.html
+    - text: "Labs"
+      icon: fas fa-desktop
+      # menu:
+      #   - text: "Projects and directories"
+      #     href: articles/projects_and_directories.html
+      #   - text: "Introduction to R Markdown"
+      #     href: articles/rmarkdown_intro.html
+      #   - text: "Creating prior distributions"
+      #     href: articles/priors.html
+      #   - text: "Simulating regression data"
+      #     href: articles/simulation.html
+      #   - text: "Metropolis sampler for linear regression model"
+      #     href: articles/metropolis.html
+      #   - text: "Poisson and binomial GLMs in JAGS"
+      #     href: articles/poisson_glm.html
+      #   - text: "Random effects ANCOVA in JAGS"
+      #     href: articles/random_effects.html
+      #   - text: "Simple state-space models in JAGS"
+      #     href: articles/state_space.html
+      #   - text: "Age-structured state-space models"
+      #     href: articles/state_space2.html
+      #   - text: "Introduction to N-mixture models"
+      #     href: articles/n-mixture1.html
+      #   - text: "Advanced N-mixture models: Zero-inflation and posterior predictive checks"
+      #     href: articles/n-mixture2.html
+      #   - text: "Estimating species richness using hierarchical occupancy models"
+      #     href: articles/multi_spp_occ.html
+      #   - text: "Cormack-Jolly-Seber models"
+      #     href: articles/cjs.html
+      #   - text: "Quantifying temporary emigration using multi-state models"
+      #     href: articles/multi-state.html
+      #   - text: "Multi-state model for survival/transition probability of a perennial plant"
+      #     href: articles/multi-state2.html
+    # - icon: fas fa-pencil-square-o
+    #   text: "Assignments"
+    #   href: articles/homework.html
 output: distill::distill_article

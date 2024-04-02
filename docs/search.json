@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-04-02T11:20:04-05:00"
+      "last_modified": "2024-04-02T11:48:55-05:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,33 @@
       "description": "Welcome to the website. I hope you enjoy it!\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2024-04-02T11:20:08-05:00"
+      "last_modified": "2024-04-02T11:48:56-05:00"
+    },
+    {
+      "path": "schedule.html",
+      "title": "Schedule",
+      "description": "Anticipated schedule for EVSB 7150: Population and Community Ecolgoy.\n",
+      "author": [
+        {
+          "name": "Spring 2024",
+          "url": {}
+        }
+      ],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2024-04-02T11:48:59-05:00"
+    },
+    {
+      "path": "Syllabus.html",
+      "title": "Syllabus",
+      "description": "Syllabus for EVSB 7150: Population and Community Ecolgoy  \n",
+      "author": [
+        {
+          "name": "Spring 2024",
+          "url": {}
+        }
+      ],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2024-04-02T11:49:00-05:00"
     }
   ],
   "collections": []
