@@ -1,0 +1,12 @@
+name: "."
+title: "EVSB7150"
+description: |
+  EVSB7150
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
