@@ -2101,6 +2101,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  <link href="site_libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+  <script src="site_libs/bsTable-3.3.7/bootstrapTable.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2140,6 +2144,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="schedule.html" aria-label="Schedule">
 <i class="fas fa-calendar" aria-hidden="true"></i>
 </a>
+<a aria-label="Lectures">
+<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+</a>
+<a aria-label="Labs">
+<i class="fas fa-desktop" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2163,6 +2173,310 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<h1 id="logistics">LOGISTICS</h1>
+<p><strong>Lecture</strong>: Tuesday and Thursday 1:30-2:45<br />
+<strong>Location</strong>: <del>ENLAB 248 (Engineering Laboratory Building)</del> <strong>Zoom</strong><br />
+<strong>Credits</strong>: 3</p>
+<h1 id="instructor">INSTRUCTOR</h1>
+<p>Dr. Allison Keever<br />
+<a href="mailto:akeever@tntech.edu" class="email">akeever@tntech.edu</a><br />
+Office: PENN 419<br />
+Office hours: By appointment</p>
+<h1 id="course-description">COURSE DESCRIPTION</h1>
+<p>Quantitative models play a central role in linking data to inferences about ecological processes. Although quantitative ecological modeling involves a diverse array of questions and techniques, many of the most common modeling frameworks are based on a set of general underlying principles. This course aims to provide students with a firm understanding of these principles and their application, with a particular focus on modeling the dynamics of plant and animal populations using Bayesian methods. By building from common principles to more specific procedures, students will be better equipped to tailor analyses to their specific data and questions, ultimately leading to deeper and more robust understanding of the ecological systems they study. Concepts discussed during lectures will be reinforced through lab exercises focused on implementing statistical models using modern software tools (e.g. R, JAGS).</p>
+<h1 id="course-objectives">COURSE OBJECTIVES</h1>
+<p>The primary objective of this course is to give you the tools to tackle your research questions using rigorous statistical models appropriate for your data. In particular, you will leave this course with:</p>
+<ul>
+<li>A firm understanding of the foundational principles underlying common ecological models<br />
+</li>
+<li>The ability to express mathematical and theoretical models as they apply to common ecological datasets<br />
+</li>
+<li>The ability to convert those models into working code for Bayesian data analysis<br />
+</li>
+<li>The confidence needed to design, analyze, and report original ecological research using sound quantitative approaches</li>
+</ul>
+<p>A secondary objective of this course is to provide you with tools and best practices for storing, manipulating, and analyzing ecological data and developing reproducible code for analyses. In my experience, most graduate students are well trained in methods for data collection and, to a degree, data analysis. However, most students do not receive formal training on the steps between data collection and reporting results from statistical models (e.g., proofing, storing, and formatting data; developing well-documented, reproducible analyses; preparing reports). Advancing the field of ecology also requires a scientific community capable of judging the quality of the code, interpretation, reporting of quantitative models. Graduate students often get few opportunities to critically review the work of their peers or to get constructive feedback on their reviews. The lab portion of this course is specifically designed to provide you with hands on experience with:</p>
+<ul>
+<li>Best practices for cleaning, formatting, and storing data using R</li>
+<li>Generating reproducible analyses and reports using R and R Markdown</li>
+<li>Providing critical peer review of scientific code and reports</li>
+</ul>
+<h1 id="learning-outcomes">LEARNING OUTCOMES</h1>
+<ol type="1">
+<li>Understand common deterministic and stochastic models used to analyze ecological data</li>
+<li>Understand key principles of linear models, including design matrices, linear predictors, and model interpretations</li>
+<li>Understand key principles of Bayesian statistics, including Bayes theorem, Markov Chain Monte Carlo methods, prior distributions, and posterior sampling</li>
+<li>Understand the concepts underlying Bayesian hierarchical models, including fixed vs. random effects, hyperparameters, and shrinkage</li>
+<li>Develop custom Bayesian models using MCMC software (e.g., JAGS) to estimate parameter values and derived quantities of interest for common ecological processes</li>
+<li>Be able to evaluate model convergence/fit of Bayesian models</li>
+<li>Be able to prepare reproducible reports using R and R Markdown</li>
+</ol>
+<h1 id="prerequisites">PREREQUISITES</h1>
+<p>Students should have at least one semester of both basic ecology and introductory statistics. Although we will thoroughly cover the foundational principles of common statistical models, a basic understanding of ecological theory and statistical inference will be very helpful.</p>
+<p>All lab activities for this course will rely heavily on the statistical programming language R (and associated software, including RStudio, JAGS, and git). During the first few weeks, each lab session will begin with a tutorial on these tools so students are not expected to be experts prior to the course. However, we will quickly move into activities that require some degree of R proficiency so I highly recommend that you have a basic understanding of programming in R (e.g., importing/exporting &amp; manipulating data objects, visualizing data) prior to this course. If you find yourself struggling with any aspects of using R, please seek individual help during office hours. The earlier we can get you up to speed, the more painless the remainder of the semester will be.</p>
+<h1 id="course-format">COURSE FORMAT</h1>
+<p>This course will be taught using a combined lecture/lab structure. During each class, I will provide a brief lecture to introduce important concepts. At the beginning of the semester, lectures will likely take up the majority of class time as we go over the basics of ecological modeling and Bayesian methods. As the semester progresses and we move towards implementing these concepts to fit ecological models, class time will include more “lab” activities. These activities will be designed to reinforce and clarify lecture topics, allowing students to get hands on experience manipulating, analyzing, and visualizing data. All class materials, including lecture slides, computer code, lab documents, and data, will be posted on the course website prior to class.</p>
+<h1 id="course-resources">COURSE RESOURCES</h1>
+<h2 id="textbooks">Textbooks</h2>
+<p>Although there are many excellent texts covering various aspects of ecological modeling, the lectures for this course will closely follow two:</p>
+<blockquote>
+<p>Hobbs, N.T. and M.B. Hooten, 2015. <em>Bayesian Models: A Statistical Primer for Ecologists</em> (available <a href="https://www.amazon.com/Bayesian-Models-Statistical-Primer-Ecologists/dp/0691159289/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1459363878&amp;sr=1-1&amp;keywords=bayesian+models+a+statistical+primer+for+ecologists">here</a>)</p>
+</blockquote>
+<blockquote>
+<p>Kéry, M. and M. Schaub, 2011. <em>Bayesian population analysis using WinBUGS: A hierarchical perspective</em> (available <a href="https://www.amazon.com/Bayesian-Population-Analysis-using-WinBUGS/dp/0123870208">here</a>).</p>
+</blockquote>
+<p>Weekly readings will be assigned from these books so I highly recommend all students purchase them prior to the start of the semester. The Kéry &amp; Schaub book also contains a wealth of useful code that, although optional, students are encouraged to implement as they read the text. Chapters from these books may occasionally be supplemented with primary journal articles. When applicable PDF’s of these articles will be posted on the course website.</p>
+<p>Although the two text books and lab materials are sufficient for mastering the material presented in this course, a number of other excellent books are available and students may find some/all of these books helpful. The following books are 100% optional for this course but I have found helpful for learning this material:</p>
+<blockquote>
+<p>Kéry, M. &amp; Royle, J.A. 2020. <em>Applied Hierarchical Modeling in Ecology: Analysis of distribution, abundance, and species richness in R and BUGS, Vol. II</em>. Academic Press.</p>
+</blockquote>
+<blockquote>
+<p>Kéry, M. &amp; Royle, J.A. 2016. <em>Applied Hierarchical Modeling in Ecology: Analysis of distribution, abundance, and species richness in R and BUGS, Vol. I</em>. Academic Press.</p>
+</blockquote>
+<blockquote>
+<p>Kéry, M., 2010. <em>Introduction to WinBUGS for ecologists: Bayesian approach to regression, ANOVA, mixed models and related analyses</em>. Academic Press.</p>
+</blockquote>
+<blockquote>
+<p>Williams, B.K., Nichols, J.D., Conroy, M.J., 2001. <em>Analysis and management of animal populations</em>. Academic Press.</p>
+</blockquote>
+<blockquote>
+<p>Bolker, B.M., 2008. <em>Ecological models and data in R</em>. Princeton University Press.</p>
+</blockquote>
+<h2 id="lab-materials">Lab materials</h2>
+<p>Materials for labs will be provided as HTML and R Markdown files on the course webpage. These materials will include step-by-step tutorials for all lab exercises as well as links to additional online resources, problem sets, and homework assignments.</p>
+<h2 id="software">Software</h2>
+<p>All lab computers will have R and RStudio installed on them so students are not required to install software on their own computers. However, students are free to use their own laptops during lab and having R and RStudio installed will make it easier to complete lab assignments outside of class. Any students wishing to use their own computers <strong>should have R, RStudio, and JAGS installed and running prior to the first lab</strong>. Detailed instructions for installing R and RStudio can be found <a href="http://stat545.com/block000_r-rstudio-install.html">here</a>. JAGS can be downloaded <a href="https://sourceforge.net/projects/mcmc-jags/files/">here</a>.</p>
+<p>If you plan to use your own computer, <strong>be sure you have the most recent versions of all three software programs installed</strong>. This will greatly decrease the chances of running to issue running the code I will provide in lab. Prior to the start of the semester, test that you have R and RStudio installed correctly by doing the following:</p>
+<ol type="1">
+<li><p>Launch RStudio</p></li>
+<li><p>Put the cursor in the window labeled <code>Console</code>. Type the following code followed by enter or return: <code>x &lt;- 2 * 4</code>. Next type <code>x</code> followed by enter or return. You should see the value 8 print to screen. If yes, you’ve succeeded in installing R and RStudio.</p></li>
+</ol>
+<p>If you encounter any problems with the previous steps, please contact me prior to the first class. We will diagnose issues running JAGS in class but for now, make sure you have the most up-to-date R packages installed by running the following:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/utils/remove.packages.html'>remove.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'coda'</span>,<span class='st'>'rjags'</span>, <span class='st'>'devtools'</span>, <span class='st'>'tidyverse'</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'coda'</span>,<span class='st'>'rjags'</span>, <span class='st'>'devtools'</span>, <span class='st'>'tidyverse'</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://devtools.r-lib.org/'>devtools</a></span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://remotes.r-lib.org/reference/install_github.html'>install_github</a></span><span class='op'>(</span><span class='st'>"kenkellner/jagsUI"</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<h1 id="attendance">ATTENDANCE</h1>
+<p>As graduate students who willingly signed up for this course, I presume that you are eager to learn the material and are self-motivated enough to put in the required effort. For this reason, I do not set a formal attendance policy. However, we will cover a lot of material over the course of the semester and each topic will build on concepts from previous weeks. As a result, missing even a few lectures or labs will make it difficult for you to fully master the learning outcomes described above. If you know you will be missing any lectures or labs, please contact me in advance so we can make sure you do not get too far behind on the material.</p>
+<h3 id="a-note-on-fieldwork">A note on fieldwork</h3>
+<p>I realize that many students have field work obligations during the spring semester. If you need to take this course but know in advance that you will be in the field for a portion of the semester, please let me know ASAP so we can discuss whether field work will be a barrier to taking the course or merely an inconvenience. This distinction will mainly be a function of how long and when you will miss class. If these absences are relatively few, taking the course may still be an option. I will do my best to record lectures and make them available via Canvas. Students will still be expected to complete and turn in any assignments they miss. If you are going to miss too many classes or will be unable to complete the assignments while you’re in the field, it may be better to take the class at a time when your field commitments are smaller.</p>
+<h1 id="grading">GRADING</h1>
+<p>Your grade in the course will be based on a total of 200 possible points. Thirty five percent of your grade (70 points) will come from 7 homework assignments. Twenty five percent of your grade (50 points) will come from a midterm exam covering the topics we discuss in lecture during the first half of the semester. The final 40% (80 points) will be based on an individual project due at the end of the semesters.</p>
+<p>The 7 homework assignments will build on concepts and skills that we cover in lecture and lab. Specific objectives and tasks for each assignment, along with any necessary data, will be posted on the course website. In general, students will be provided with ‘raw’ data and will need to clean/prepare (and document!) data prior to analysis. Each assignment will be due before class the week after the assignment is posted. All assignments must be prepared as R Markdown files that include all text, code, model output, and figures necessary to fully document your work and conclusions (we will spend the first several labs going over preparation of reports using R Markdown so, again, no previous experience is necessary). See <a href="https://rushinglab.github.io/WILD6900/articles/homework.html">here</a> for instructions on submitting assignment</p>
+<p>Individual projects may address an ecological question of your choosing, but must be approved by me during the first half of the semester. You are free to use any data you have access to, including data from your own projects, published datasets, or even simulated data. Once the project topic and data are approved, you are expected to develop statistical models using the tools and skill gained during the semester to gain insights into the ecological processes that generated your data. Once completed, a final report should be prepared as if you were submitting the results to a short-format scientific journal. Additionally, you will give a short oral presentation of your results during the final week of class as if you were presenting at a professional conference. Later in the semester, I will provide a rubric for how the written and oral reports will be assessed.</p>
+<h1 id="grading-scale">GRADING SCALE</h1>
+<div class="layout-chunk" data-layout="l-body">
+<table class="table table-striped table-hover table-condensed table-responsive" style="color: black; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:center;">
+GRADE
+</th>
+<th style="text-align:center;">
+% RANGE
+</th>
+<th style="text-align:center;">
+POINT RANGE
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+A
+</td>
+<td style="text-align:center;">
+93-100%
+</td>
+<td style="text-align:center;">
+186-200
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+A-
+</td>
+<td style="text-align:center;">
+90-92.9%
+</td>
+<td style="text-align:center;">
+180-185
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+B+
+</td>
+<td style="text-align:center;">
+87-89.9%
+</td>
+<td style="text-align:center;">
+174-179
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+B
+</td>
+<td style="text-align:center;">
+83-86.9%
+</td>
+<td style="text-align:center;">
+166-173
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+B-
+</td>
+<td style="text-align:center;">
+80-82.9%
+</td>
+<td style="text-align:center;">
+160-165
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+C+
+</td>
+<td style="text-align:center;">
+77-79.9%
+</td>
+<td style="text-align:center;">
+154-159
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+C
+</td>
+<td style="text-align:center;">
+73-76.9%
+</td>
+<td style="text-align:center;">
+146-153
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+C-
+</td>
+<td style="text-align:center;">
+70-72.9%
+</td>
+<td style="text-align:center;">
+140-145
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+D+
+</td>
+<td style="text-align:center;">
+67-69.9%
+</td>
+<td style="text-align:center;">
+134-139
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+D
+</td>
+<td style="text-align:center;">
+60-66.9%
+</td>
+<td style="text-align:center;">
+126-133
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+F
+</td>
+<td style="text-align:center;">
+59.9% and below
+</td>
+<td style="text-align:center;">
+0-125
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="library-services">LIBRARY SERVICES</h1>
+<p>All USU students attending classes in Logan, at our Regional Campuses, or online can access all databases, e-journals, and e-books regardless of location. Additionally, the library will mail printed books to students, at no charge to them. Students can also borrow books from any Utah academic library. Take advantage of all library services and learn more at <a href="libguides.usu.edu/rc">libguides.usu.edu/rc</a>.</p>
+<h1 id="classroom-civilily">CLASSROOM CIVILILY</h1>
+<p>Utah State University supports the principle of freedom of expression for both faculty and students. The University respects the rights of faculty to teach and students to learn. Maintenance of these rights requires classroom conditions that do not impede the learning process. Disruptive classroom behavior will not be tolerated. An individual engaging in such behavior may be subject to disciplinary action. Read <a href="https://studentconduct.usu.edu/studentcode/article5">Student Code Article V Section V-3</a> for more information.</p>
+<h1 id="university-policies-procedures">UNIVERSITY POLICIES &amp; PROCEDURES</h1>
+<h2 id="academic-freedom-and-professional-responsibilities">Academic Freedom and Professional Responsibilities</h2>
+<p>Academic freedom is the right to teach, study, discuss, investigate, discover, create, and publish freely. Academic freedom protects the rights of faculty members in teaching and of students in learning. Freedom in research is fundamental to the advancement of truth. Faculty members are entitled to full freedom in teaching, research, and creative activities, subject to the limitations imposed by professional responsibility. Faculty Code Policy #403 further defines academic freedom and professional responsibilities.</p>
+<h2 id="academic-integrity-the-honor-system">Academic Integrity – “The Honor System”</h2>
+<p>Each student has the right and duty to pursue his or her academic experience free of dishonesty. To enhance the learning environment at Utah State University and to develop student academic integrity, each student agrees to the following Honor Pledge:</p>
+<blockquote>
+<p>“<em>I pledge, on my honor, to conduct myself with the foremost level of academic integrity</em>.”</p>
+</blockquote>
+<p>A student who lives by the Honor Pledge is a student who does more than not cheat, falsify, or plagiarize. A student who lives by the Honor Pledge:</p>
+<ul>
+<li>Espouses academic integrity as an underlying and essential principle of the Utah State University community;</li>
+<li>Understands that each act of academic dishonesty devalues every degree that is awarded by this institution; and</li>
+<li>Is a welcomed and valued member of Utah State University.</li>
+</ul>
+<h2 id="academic-dishonesty">Academic dishonesty</h2>
+<p>The instructor of this course will take appropriate actions in response to Academic Dishonesty, as defined the University’s Student Code. Acts of academic dishonesty include but are not limited to:</p>
+<ul>
+<li><strong>Cheating</strong>: using, attempting to use, or providing others with any unauthorized assistance in taking quizzes, tests, examinations, or in any other academic exercise or activity. Unauthorized assistance includes:
+<ul>
+<li>Working in a group when the instructor has designated that the quiz, test, examination, or any other academic exercise or activity be done “individually;”</li>
+<li>Depending on the aid of sources beyond those authorized by the instructor in writing papers, preparing reports, solving problems, or carrying out other assignments;</li>
+<li>Substituting for another student, or permitting another student to substitute for oneself, in taking an examination or preparing academic work;</li>
+<li>Acquiring tests or other academic material belonging to a faculty member, staff member, or another student without express permission;</li>
+<li>Continuing to write after time has been called on a quiz, test, examination, or any other academic exercise or activity;</li>
+<li>Submitting substantially the same work for credit in more than one class, except with prior approval of the instructor; or engaging in any form of research fraud.</li>
+</ul></li>
+<li><strong>Falsification</strong>: altering or fabricating any information or citation in an academic exercise or activity.</li>
+<li><strong>Plagiarism</strong>: representing, by paraphrase or direct quotation, the published or unpublished work of another person as one‘s own in any academic exercise or activity without full and clear acknowledgment. It also includes using materials prepared by another person or by an agency engaged in the sale of term papers or other academic materials.</li>
+</ul>
+<p>For additional information go to: <a href="https://studentconduct.usu.edu/studentcode/article6">ARTICLE VI. University Regulations Regarding Academic Integrity</a></p>
+<h2 id="sexual-harassmenttitle-ix">Sexual Harassment/Title IX</h2>
+<p>Utah State University is committed to creating and maintaining an environment free from acts of sexual misconduct and discrimination and to fostering respect and dignity for all members of the USU community. Title IX and USU Policy 339 address sexual harassment in the workplace and academic setting.</p>
+<p>The university responds promptly upon learning of any form of possible discrimination or sexual misconduct. Any individual may contact USU’s <a href="http://aaeo.usu.edu/">Affirmative Action/Equal Opportunity (AA/EO) Office</a> for available options and resources or clarification. The university has established a complaint procedure to handle all types of discrimination complaints, including sexual harassment (<a href="http://www.usu.edu/policies/305/">USU Policy 305</a>), and has designated the AA/EO Director/Title IX Coordinator as the official responsible for receiving and investigating complaints of sexual harassment.</p>
+<h2 id="assumption-of-risk">Assumption of Risk</h2>
+<p>All classes, programs, and extracurricular activities within the University involve some risk, and certain ones involve travel. The University provides opportunities to participate in these programs on a voluntary basis. Therefore, students should not participate in them if they do not care to assume the risks. Students can ask the respective program leaders/sponsors about the possible risks a program may generate, and if students are not willing to assume the risks, they should not select that program. By voluntarily participating in classes, programs, and extracurricular activities, a student does so at his or her own risk. General information about University Risk Management policies, insurance coverage, vehicle use policies, and risk management forms can be found at: <a href="http://www.usu.edu/riskmgt/">http://www.usu.edu/riskmgt/</a></p>
+<h2 id="withdrawal-policy-and-i-grade-policy">Withdrawal Policy and “I” Grade Policy</h2>
+<p>Students are required to complete all courses for which they are registered by the end of the semester. In some cases, a student may be unable to complete all of the coursework because of extenuating circumstances, but not due to poor performance or to retain financial aid. The term ‘extenuating’ circumstances includes: (1) incapacitating illness which prevents a student from attending classes for a minimum period of two weeks, (2) a death in the immediate family, (3) financial responsibilities requiring a student to alter a work schedule to secure employment, (4) change in work schedule as required by an employer, or (5) other emergencies deemed appropriate by the instructor.</p>
+<h2 id="students-with-disabilities">Students with Disabilities</h2>
+<p>USU welcomes students with disabilities. If you have, or suspect you may have, a physical, mental health, or learning disability that may require accommodations in this course, please contact the <a href="http://www.usu.edu/drc/">Disability Resource Center (DRC)</a> as early in the semester as possible (University Inn # 101, (435) 797‐2444, <a href="mailto:drc@usu.edu" class="email">drc@usu.edu</a>). All disability related accommodations must be approved by the DRC. Once approved, the DRC will coordinate with faculty to provide accommodations.</p>
+<h2 id="diversity-statement">Diversity Statement</h2>
+<p>Regardless of intent, careless or ill-informed remarks can be offensive and hurtful to others and detract from the learning climate. If you feel uncomfortable in a classroom due to offensive language or actions by an instructor or student(s) regarding ethnicity, gender, or sexual orientation, contact:</p>
+<ul>
+<li><a href="https://studentaffairs.usu.edu">Division of Student Affairs</a>: (435) 797-1712, <a href="mailto:studentservices@usu.edu" class="email">studentservices@usu.edu</a>, TSC 220</li>
+<li><a href="https://ususa.usu.edu/student-association/student-advocacy/legal-services">Student Legal Services</a>: (435) 797-2912, TSC 326,</li>
+<li><a href="http://accesscenter.usu.edu">Access and Diversity</a>: (435) 797-1728, <a href="mailto:access@usu.edu" class="email">access@usu.edu</a>; TSC 315</li>
+<li><a href="http://accesscenter.usu.edu/multiculture">Multicultural Programs</a>: (435) 797-1728, TSC 315</li>
+<li><a href="http://accesscenter.usu.edu/lgbtqa">LGBTQA Programs</a>: (435) 797-1728, TSC 3145</li>
+<li><a href="https://www.usu.edu/provost/diversity">Provost‘s Office Diversity Resources</a>: (435) 797-8176</li>
+</ul>
+<p>You can learn about your student rights by visiting <a href="https://studentconduct.usu.edu/studentcode">The Code of Policies and Procedures for Students at Utah State University</a></p>
+<h2 id="grievance-process">Grievance Process</h2>
+<p>Students who feel they have been unfairly treated may file a grievance through the channels and procedures described in the Student Code: <a href="https://studentconduct.usu.edu/studentcode/article7">Article VII</a>.</p>
+<h2 id="full-details-for-usu-academic-policies-and-procedures-can-be-found-at">Full details for USU Academic Policies and Procedures can be found at:</h2>
+<ul>
+<li><a href="https://studentconduct.usu.edu/">Student Conduct</a></li>
+<li><a href="https://studentconduct.usu.edu/studentcode/">Student Code</a></li>
+<li><a href="https://studentconduct.usu.edu/studentcode/article6">Academic Integrity</a></li>
+<li><a href="http://www.usu.edu/provost/faculty-life/syllabus.cfm">USU Selected Academic Policies and Procedures</a></li>
+<li><a href="http://catalog.usu.edu/content.php?catoid=4&amp;navoid=546">USU Academic Policies and Procedures</a></li>
+<li><a href="https://www.usu.edu/policies/403/">Academic Freedom and Professional Responsibility Policy</a></li>
+</ul>
+<h2 id="emergency-procedures">Emergency Procedures</h2>
+<p>In the case of a drill or real emergency, classes will be notified to evacuate the building by the sound of the fire/emergency alarm system or by a building representative. In the event of a disaster that may interfere with either notification, evacuate as the situation dictates (i.e., in an earthquake when shaking ceases or immediately when a fire is discovered). Turn off computers and take any personal items with you. Elevators should not be used; instead, use the closest stairs.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
