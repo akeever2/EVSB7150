@@ -1,10 +1,6 @@
 ---
 title: "Syllabus"
-subtitle: "EVSB 7150: Population and Community Ecolgoy"
-description: |
-  Syllabus for EVSB 7150: Population and Community Ecolgoy  
-author: 
-  - name: "Spring 2024"  
+subtitle: "EVSB 7150: Population and Community Ecolgoy"  
 output: distill::distill_article
 ---
 

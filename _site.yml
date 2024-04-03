@@ -3,26 +3,27 @@ title: "EVSB7150"
 description: |
   Course Materials for EVSB7150: Population and Communnity Ecology
 output_dir: "docs"
+repository_url: https://github.com/akeever2/EVSB7150  
 navbar:
   left:
     - icon: fa-home
       href: index.html
   right:
     - text: "Syllabus"
-      icon: fas fa-book
+      # icon: fas fa-book
       href: Syllabus.html
     - text: "Schedule"
-      icon: fas fa-calendar
+      # icon: fas fa-calendar
       href: schedule.html
     - text: "Lectures"
-      icon: fa-file-pdf-o
-      # menu:
-      #   - text: "Lecture 0: Introduction to WILD6900"
-      #     href: articles/Lecture0/Lecture0.html
-      #   - text: "Lecture 1: Introduction to statistical inference in ecology"
-      #     href: articles/Lecture1/Lecture1.html
-      #   - text: "Lecture 2: Probability refresher (or introduction)"
-      #     href: articles/Lecture2/Lecture2.html
+      # icon: fa-file-pdf-o
+      menu:
+        - text: "Lecture 0: Introduction to EVSB7150"
+          href: Lectures/Lecture0.html
+        - text: "Lecture 1: Introduction to statistical inference in ecology"
+          href: Lectures/Lecture1.html
+        - text: "Lecture 2: Probability refresher (or introduction)"
+          href: Lectures/Lecture2.html
       #   - text: "Lecture 3: Principles of Bayesian inference"
       #     href: articles/Lecture3/Lecture3.html
       #   - text: "Lecture 4: More about prior distributions"
@@ -50,16 +51,12 @@ navbar:
       #   - text: "Lecture 15: Multi-state models"
       #     href: articles/Lecture15/Lecture15.html
     - text: "Labs"
-      icon: fas fa-desktop
-      # menu:
-      #   - text: "Projects and directories"
-      #     href: articles/projects_and_directories.html
-      #   - text: "Introduction to R Markdown"
-      #     href: articles/rmarkdown_intro.html
-      #   - text: "Creating prior distributions"
-      #     href: articles/priors.html
-      #   - text: "Simulating regression data"
-      #     href: articles/simulation.html
+      # icon: fas fa-desktop
+      menu:
+        - text: "Projects and directories"
+          href: Labs/projects.html
+        - text: "Simulating regression data"
+          href: Labs/simulation.html
       #   - text: "Metropolis sampler for linear regression model"
       #     href: articles/metropolis.html
       #   - text: "Poisson and binomial GLMs in JAGS"
@@ -85,4 +82,6 @@ navbar:
     # - icon: fas fa-pencil-square-o
     #   text: "Assignments"
     #   href: articles/homework.html
+    - icon: fab fa-github
+      href: https://github.com/akeever2/EVSB7150
 output: distill::distill_article
